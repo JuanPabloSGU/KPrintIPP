@@ -1,0 +1,6 @@
+PageSize A4
+Margins 1in 1in 1in 1in
+SetFont Arial 12
+Text 100 200 "Hello, Custom PDL!"
+NewLine
+Text 200 300 "Hello, Again"
