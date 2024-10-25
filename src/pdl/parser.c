@@ -97,7 +97,17 @@ void handle_set_font(const char *args) {
 
   font->handler(font_size);
 }
-void handle_margins(const char *args) { printf("Margins: %s\n", args); }
+void handle_margins(const char *args) {
+  int top, right, bottom, left;
+
+  if (sscanf(args, "%d %d %d %d", &top, &right, &bottom, &left) == 4) {
+    printf("Margins: Top=%d, Right=%d, Bottom=%d, Left=%d\n", top, right,
+           bottom, left);
+  } else {
+    printf("Invalid Margins command: %s\n", args);
+  }
+}
+
 void handle_unknown(const char *args) { printf("Unknown command: %s\n", args); }
 // Command lookup table
 static const CommandMap command_table[] = {

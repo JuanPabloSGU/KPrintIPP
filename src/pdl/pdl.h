@@ -50,6 +50,11 @@ typedef struct {
 } FontMap;
 
 void parse_pdl(const char *pdl);
-void draw_text(const char *text, int x, int y);
+
+void render_text(int x, int y, const char *text,
+                 const RenderSettings *settings);
+
+void render_pdl(const char *command, const char *args,
+                const RenderSettings *settings);
 
 #endif // !PDL_H
